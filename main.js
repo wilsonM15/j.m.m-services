@@ -1,57 +1,92 @@
-/*--------------Dropdown Menu --------------------*/
-const dropdownBtn = document.getElementById("btn");
-const dropdownMenu = document.getElementById("dropdown");
-const toggleArrow = document.getElementById("arrow");
+/* ============================================================
+   main.js — JMoura Portfolio
+   ============================================================ */
 
-// Toggle dropdown function
-const toggleDropdown = function () {
-  dropdownMenu.classList.toggle("show");
-  toggleArrow.classList.toggle("arrow");
+/* ---------- Dropdown / Navigation ---------- */
+const dropdownBtn  = document.getElementById('btn');
+const dropdownMenu = document.getElementById('dropdown');
+
+const toggleDropdown = () => {
+    const isOpen = dropdownMenu.classList.toggle('show');
+    dropdownBtn.setAttribute('aria-expanded', isOpen);
 };
 
-// Toggle dropdown open/close when dropdown button is clicked
-dropdownBtn.addEventListener("click", function (e) {
-  e.stopPropagation();
-  toggleDropdown();
-});
-
-// Close dropdown when dom element is clicked
-document.documentElement.addEventListener("click", function () {
-  if (dropdownMenu.classList.contains("show")) {
+dropdownBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     toggleDropdown();
-  }
+});
+
+// Close dropdown when clicking outside
+document.documentElement.addEventListener('click', () => {
+    if (dropdownMenu.classList.contains('show')) {
+        toggleDropdown();
+    }
+});
+
+// Close dropdown when a nav link is clicked
+dropdownMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (dropdownMenu.classList.contains('show')) toggleDropdown();
+    });
 });
 
 
+/* ---------- Carousel ---------- */
+const viewport = document.querySelector('.carousel__viewport');
+const prevBtn  = document.getElementById('prev-btn');
+const nextBtn  = document.getElementById('next-btn');
+
+if (viewport && prevBtn && nextBtn) {
+    const slideWidth = () => {
+        const slide = viewport.querySelector('.carousel__slide');
+        return slide ? slide.offsetWidth + parseInt(getComputedStyle(slide).marginRight || 0) : 300;
+    };
+
+    nextBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: slideWidth(), behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        viewport.scrollBy({ left: -slideWidth(), behavior: 'smooth' });
+    });
+
+    // Hide/show arrows based on scroll position
+    const updateArrows = () => {
+        prevBtn.style.opacity = viewport.scrollLeft <= 10 ? '0.3' : '1';
+        nextBtn.style.opacity =
+            viewport.scrollLeft + viewport.clientWidth >= viewport.scrollWidth - 10
+                ? '0.3' : '1';
+    };
+
+    viewport.addEventListener('scroll', updateArrows, { passive: true });
+    updateArrows();
+}
 
 
-/*----------------------------work work-----------------------------*/
+/* ---------- Active nav link on scroll ---------- */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.dropdown a');
+
+const highlightNav = () => {
+    let current = '';
+    sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
+    });
+    navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+    });
+};
+
+window.addEventListener('scroll', highlightNav, { passive: true });
 
 
- /*------   typed JS --------------------------------*/
+/* ---------- Scroll Reveal ---------- */
+if (typeof ScrollReveal !== 'undefined') {
+    const sr = ScrollReveal({ distance: '60px', duration: 1800, delay: 200, reset: false });
 
-/*const typed = new Typed('.multiple-text', {
-  strings: ['J.M.M'],
-      typeSpeed: 90,
-      backSpeed: 40,
-      backDelay: 2000,
-      loop: true,
-      
-  }); */
-
-
-
-  /*================================SCROLL REVEAL=================================== */
-ScrollReveal({
-  distance: '70px',
-  duration: 2000,
-  delay: 300,
-});
-
-ScrollReveal().reveal('.about-text , .wood-work , .gold-work, .restauration ', {origin: 'left'});
-ScrollReveal().reveal('.touches-work , .assembly-work , .work-title h1 ', {origin: 'right'});
-ScrollReveal().reveal('.heading', {origin: 'top'});
-ScrollReveal().reveal('.carousel__viewport, .footer, .contact-box', {origin: 'bottom'});
-
-
-
+    sr.reveal('.about-text, .wood-work, .gold-work, .restauration', { origin: 'left' });
+    sr.reveal('.touches-work, .assembly-work, .about-tagline',       { origin: 'right' });
+    sr.reveal('.heading',                                              { origin: 'top' });
+    sr.reveal('.carousel, .footer, .contact-form',                    { origin: 'bottom' });
+    sr.reveal('.work-title h1',                                        { origin: 'top', delay: 100 });
+}

@@ -3,250 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.M.M. — Furniture Finishing & Assembly</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Noto+Serif+Gurmukhi:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:wght@200&display=swap" rel="stylesheet">
-    <title>JMouraPortfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="qmedia.css">
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/aos.css')}}">
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!--UBUNTU FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <!--RAJDHANI FONT-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-
-
-    <!-----------HEADER DESIGN---------------------->
-
-
+<!-- ==================== HEADER / HERO ==================== -->
 <section class="background-img" id="background-img">
 
-<div class="container">
-  <button class="btn" id="btn">
-   <span class="material-symbols-outlined">
-      menu
-      </span>
-  </button>
+    <div class="container">
+        <button class="btn" id="btn" aria-label="Open navigation menu" aria-expanded="false">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
 
-  <div class="dropdown" id="dropdown">
-    <a href="#background-img">
-     
-      HOME
-    </a>
-    <a href="#about">
-     
-      ABOUT
-    </a>
-    <a href="#work">
-      
-      WORK
-    </a>
-    <a href="#contact">
-      
-      CONTACT
-    </a>
-  </div>
-</div>
+        <nav class="dropdown" id="dropdown" role="navigation" aria-label="Main navigation">
+            <a href="#background-img">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#work">WORK</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </div>
 
+    <!-- ==================== HOME SECTION ==================== -->
+    <section class="home" id="home">
+        <div class="hero-content">
+            <h1 class="hero-initials">J.M.M.</h1>
+            <p class="hero-subtitle">Furniture Finishing &amp; Assembly</p>
+            <a href="#about" class="hero-cta">Discover More</a>
+        </div>
 
-    <!-----------HOME SECTION DESIGN ---------------------->
+        <div class="scroll-indicator">
+            <span>Scroll down</span>
+            <span class="material-symbols-outlined">arrow_downward</span>
+        </div>
+    </section>
 
- <section class="home" id="home">
-        
-         <div class="name">
-            <h1 class="name"><span class="multiple-text"></span></h1>
-            <h2>J.M.M.</h2>
-            <h3>services</h3>
-         </div>
-         <div class="scroll">
-            <h5>Scroll or drag down </h5><span class="material-symbols-outlined">
-               arrow_downward
-               </span>
-            
-         </div>
-        
-    
- </section>
- 
-</section>  
+</section>
 
-
-
-    <!-----------ABOUT SECTION DESIGN ---------------------->
-
-
+<!-- ==================== ABOUT SECTION ==================== -->
 <section class="about" id="about">
-      <div class="about-me">
-         <p class="about-text">My name is Jorge, and I'm a seasoned specialist in furniture finishing and assembly. 
-            With an impressive 30 years of experience in the furniture industry,
-            I have the expertise to handle any project with precision and skill.
-            if you are in need of my services, please do not hesitate to <span id="contact-link"><a href="#contact">contact me</a></span>.<br>
-           <span id="text-color">Let's create beautiful and functional spaces together</span>.</p> 
-    
-  
-      </div>
-      <div class="about-img">
-        <!--<img src="photos/Image-1.jpg" alt="gold" >-->
-        <img src="gold 1.jpg" alt="gold">
-        
-      </div>
-      <div class="about-work">
-         <ul class="about-work">
+    <div class="about-grid">
+        <div class="about-text-col">
+            <p class="about-text">
+                My name is Jorge, and I'm a seasoned specialist in furniture finishing and assembly.
+                With an impressive <strong>30 years of experience</strong> in the furniture industry,
+                I have the expertise to handle any project with precision and skill.
+                If you are in need of my services, please do not hesitate to
+                <a href="#contact" class="contact-link">contact me</a>.
+            </p>
+            <p class="about-tagline">Let's create beautiful and functional spaces together.</p>
+        </div>
+
+        <div class="about-img">
+            <img src="gold 1.jpg" alt="Gold leaf furniture detail by Jorge Moura">
+        </div>
+
+        <ul class="about-work" aria-label="Services offered">
             <li class="wood-work">Wood Work</li>
-            <li class="touches-work">Finishing Touches</li> 
+            <li class="touches-work">Finishing Touches</li>
             <li class="restauration">Restauration</li>
             <li class="assembly-work">Assembly</li>
             <li class="gold-work">Gold Leaf Gilding</li>
-            
-         </ul>
-   
-        
-      </div>
+        </ul>
+    </div>
 </section>
-  
 
+<!-- ==================== GALLERY SECTION ==================== -->
+<section class="gallery-section" id="work">
+    <div class="work-title">
+        <h1>Gallery</h1>
+    </div>
 
-   <!-----------WORK SECTION DESIGN ---------------------->
-   <section class="carousel" id="work">
-      <div class="work-title">
-         <h1>Gallery</h1>
-      </div>
-      
-      <ol class="carousel__viewport">
-         <li id="carousel__slide1" 
-             class="carousel__slide">
-             <img src="PHOTO-2024-04-13-10-08-29.jpg">
-          
-         </li>
+    <div class="carousel" role="region" aria-label="Work gallery">
+        <ol class="carousel__viewport">
+            <li class="carousel__slide"><img src="PHOTO-2024-04-13-10-08-29.jpg" alt="Furniture project 1" loading="lazy"></li>
+            <li class="carousel__slide"><img src="closet 1.jpg" alt="Custom closet" loading="lazy"></li>
+            <li class="carousel__slide"><img src="DOOR.jpg" alt="Finished door" loading="lazy"></li>
+            <li class="carousel__slide"><img src="armory.jpg" alt="Armoire restoration" loading="lazy"></li>
+            <li class="carousel__slide"><img src="PHOTO-2024-04-13-10-12-37.jpg" alt="Furniture project 5" loading="lazy"></li>
+            <li class="carousel__slide"><img src="PHOTO-2024-04-13-10-14-25.jpg" alt="Furniture project 6" loading="lazy"></li>
+            <li class="carousel__slide"><img src="closer.jpg" alt="Detail work" loading="lazy"></li>
+            <li class="carousel__slide"><img src="gold.jpg" alt="Gold leaf gilding" loading="lazy"></li>
+            <li class="carousel__slide"><img src="PHOTO-2024-04-13-10-09-38.jpg" alt="Furniture project 9" loading="lazy"></li>
+        </ol>
 
+        <button class="carousel-arrow carousel-arrow--prev" id="prev-btn" aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel-arrow carousel-arrow--next" id="next-btn" aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+</section>
 
-         <li id="carousel__slide2"
-             tabindex="0"
-                  class="carousel__slide">
-                  <img src="closet 1.jpg">
-           
-         </li>
-
-
-         <li id="carousel__slide3"
-             tabindex="0"
-             class="carousel__slide">
-              <img src="DOOR.jpg">
-          
-         </li>
-
-
-         <li id="carousel__slide4"
-             tabindex="0"
-             class="carousel__slide">
-              <img src="armory.jpg">
-          
-         </li>
-
-
-         <li id="carousel__slide5"
-            tabindex="0"
-            class="carousel__slide">
-             <img src="PHOTO-2024-04-13-10-12-37.jpg">
-         </li>
-
-         <li id="carousel__slide6"
-         tabindex="0"
-         class="carousel__slide">
-           <img src="PHOTO-2024-04-13-10-14-25.jpg">
-         </li> 
-
-         <li id="carousel__slide7"
-         tabindex="0"
-         class="carousel__slide">
-           <img src="closer.jpg">
-         </li>
-
-         <li id="carousel__slide8"
-         tabindex="0"
-         class="carousel__slide">
-          <img src="gold.jpg">
-         </li>
-
-         <li id="carousel__slide9"
-         tabindex="0"
-         class="carousel__slide">
-          <img src="PHOTO-2024-04-13-10-09-38.jpg">
-         </li>
-      </ol>
-
- </section>
-   
-<!--===============-CONTACT SECTION DESIGN =================-->
-
+<!-- ==================== CONTACT SECTION ==================== -->
 <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me</span></h2>
- 
-   <form action="https://api.web3forms.com/submit" method="POST"  class="contact-box">
-      <div class="input-box">
-          <!-- Replace with your Access Key -->
-         <input type="hidden" name="access_key" value="e2287b10-e1cb-47e8-acee-da8c2bd681e6">
+    <h2 class="heading">Contact <span>Me</span></h2>
 
-          <!-------------- Form Inputs.----------- -->
-         <input id="fullname" type="text" name= "name" placeholder="Full Name" required>
-         <input id="email" type="email" name="email" placeholder="Email" required>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+        <input type="hidden" name="access_key" value="e2287b10-e1cb-47e8-acee-da8c2bd681e6">
 
-         <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+        <div class="input-group">
+            <input id="fullname" type="text" name="name" placeholder="Full Name" required autocomplete="name">
+        </div>
+        <div class="input-group">
+            <input id="email" type="email" name="email" placeholder="Email Address" required autocomplete="email">
+        </div>
+        <div class="input-group">
+            <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+        </div>
 
-         <input type="hidden" name="redirect" value="https://web3forms.com/success">
-         <input type="submit" value="Send Message" class="send">
-            <!-- hCaptcha Spam Protection -->
-         <<div class="h-captcha" data-captcha="true"></div>
-        
-      </div>
-   </form>
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <div class="h-captcha" data-captcha="true"></div>
+
+        <button type="submit" class="send-btn">Send Message</button>
+    </form>
 </section>
 
-<!------------FOOTER DESIGN------------------->
-
+<!-- ==================== FOOTER ==================== -->
 <footer class="footer">
-  <div class="footer-text">
-      <p>Copyright &copy; 2024 by <a href="https://www.wilsonmdev.com/" name="Wilson de Moura" id="myname" >Wilson de Moura</a> | All Rights Reserved.</p>
-  </div>
-
-  <div class="footer-iconTop">
-      <a href="#background-img"><i class="fa-solid fa-angle-up"></i></a>
-  </div>
+    <p class="footer-text">
+        Copyright &copy; 2024 by
+        <a href="https://www.wilsonmdev.com/" target="_blank" rel="noopener" class="footer-credit">Wilson de Moura</a>
+        | All Rights Reserved.
+    </p>
+    <a href="#background-img" class="footer-top" aria-label="Back to top">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
 </footer>
 
-     <!-----------------Scroll Reveal js----->
-     <script src="https://unpkg.com/scrollreveal"></script>
-
-
-     <!-----------------------typed js----->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-<!-- Required for hCaptcha -->
-  <script src="https://web3forms.com/client/script.js" async defer></script>
-
-
-   <script src="main.js"></script>
+<!-- ==================== SCRIPTS ==================== -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script src="main.js"></script>
 </body>
 </html>
